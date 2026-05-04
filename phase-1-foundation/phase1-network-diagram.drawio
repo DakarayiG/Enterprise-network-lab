@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="umkUCYA3zJUJkwLu4DIA">
+    <mxGraphModel dx="1123" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-2" parent="1" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" value="Windows 11 PC&lt;div&gt;&amp;nbsp;(WSL2)&lt;br/&gt;                  IP: 172.27.172.215&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="170" x="620" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-9" parent="1" style="image;html=1;image=img/lib/clip_art/networking/Router_Icon_128x128.png" value="WSL Gateway&lt;br&gt;IP: 172.27.160.1" vertex="1">
+          <mxGeometry height="80" width="80" x="450" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-10" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" value="Ubuntu Server&lt;br&gt;                      (WSL2)&lt;br&gt;IP: 172.27.172.215/20" vertex="1">
+          <mxGeometry height="80" width="80" x="110" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Phase 1 - Foundation Network&lt;br/&gt;        enterprise-network-lab | May 2026" vertex="1">
+          <mxGeometry height="30" width="260" x="80" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-16" edge="1" parent="1" source="S8U_XRoGAk4bpmRz0Bl7-9" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.999;exitY=0.358;exitDx=0;exitDy=0;exitPerimeter=0;" target="S8U_XRoGAk4bpmRz0Bl7-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="450" as="sourcePoint" />
+            <mxPoint x="560" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-17" connectable="0" parent="S8U_XRoGAk4bpmRz0Bl7-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="PC to Gateway: 172.27.172.0/20" vertex="1">
+          <mxGeometry relative="1" x="0.0538" y="7" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-18" edge="1" parent="1" source="S8U_XRoGAk4bpmRz0Bl7-9" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.023;exitY=0.144;exitDx=0;exitDy=0;exitPerimeter=0;" target="S8U_XRoGAk4bpmRz0Bl7-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="510" as="sourcePoint" />
+            <mxPoint x="530" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-19" connectable="0" parent="S8U_XRoGAk4bpmRz0Bl7-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Gateway to Server: SSH Port 22" vertex="1">
+          <mxGeometry relative="1" x="-0.1586" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-20" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.cloud;" value="Internet" vertex="1">
+          <mxGeometry height="40" width="70" x="440" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-21" edge="1" parent="1" source="S8U_XRoGAk4bpmRz0Bl7-2" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" target="S8U_XRoGAk4bpmRz0Bl7-20" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="130" as="sourcePoint" />
+            <mxPoint x="530" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-22" connectable="0" parent="S8U_XRoGAk4bpmRz0Bl7-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Default Gateway" vertex="1">
+          <mxGeometry relative="1" x="0.0229" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8U_XRoGAk4bpmRz0Bl7-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Legend&lt;br/&gt;        ──────────────&lt;br/&gt;        → Active connection&lt;br/&gt;        Port 22 = SSH&lt;br/&gt;        /20 = Subnet mask&lt;br/&gt;        172.27.x.x = Private IP range" vertex="1">
+          <mxGeometry height="140" width="370" x="460" y="820" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
